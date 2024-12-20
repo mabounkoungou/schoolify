@@ -1,11 +1,14 @@
 generator client {
   provider = "prisma-client-js"
+  engineType      = "dataproxy" // Ensures the use of Prisma Data Proxy
+
 }
 
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
 
 model Admin {
   id       String @id
